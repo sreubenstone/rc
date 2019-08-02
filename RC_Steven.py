@@ -1,5 +1,5 @@
 import requests
-import config
+import configuration
 import json
 import pandas as pd
 from pandas import ExcelWriter
@@ -132,7 +132,7 @@ rc = STEVEN_RC(
 
 
 response = rc.import_records_excel(
-    config.redcap_token, '/Users/stevenreubenstone/Desktop/test_data.xlsx')
+    configuration.redcap_token, '/Users/stevenreubenstone/Desktop/test_data.xlsx')
 
 
 print(response.text)
