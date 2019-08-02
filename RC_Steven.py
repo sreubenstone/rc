@@ -1,11 +1,10 @@
 import requests
+import config
 import json
 import pandas as pd
 from pandas import ExcelWriter
 from pandas import ExcelFile
 
-
-redcap_token = '4670AE0BDC9F99F34CBCACA583683D5D'
 
 record1 = {
     "record_id": 63454353453,
@@ -133,7 +132,7 @@ rc = STEVEN_RC(
 
 
 response = rc.import_records_excel(
-    redcap_token, '/Users/stevenreubenstone/Desktop/test_data.xlsx')
+    config.redcap_token, '/Users/stevenreubenstone/Desktop/test_data.xlsx')
 
 
 print(response.text)
